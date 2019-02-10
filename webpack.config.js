@@ -1,11 +1,12 @@
 /* eslint-disable no-undef */
 const path = require('path');
 const webpack = require('webpack');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const GitRevisionPlugin = require('git-revision-webpack-plugin');
 const gitRevisionPlugin = new GitRevisionPlugin();
 
 module.exports = {
+
+    mode: 'production',
 
     bail: true,
 
@@ -36,30 +37,13 @@ module.exports = {
                         loader: require.resolve('babel-loader'),
                         options: {
                             compact: true,
-                            presets: ['env']
+                            presets: ['@babel/preset-env']
                         }
                     }
                 ]
             }
         ]
     },
-
-    plugins: [
-        new webpack.DefinePlugin({
-            DPLAYER_VERSION: `"${require('./package.json').version}"`,
-            GIT_HASH: JSON.stringify(gitRevisionPlugin.version())
-        }),
-        new webpack.optimize.UglifyJsPlugin({
-            compress: {
-                warnings: false
-            },
-            output: {
-                comments: false,
-                ascii_only: true
-            },
-            sourceMap: true
-        })
-    ],
 
     node: {
         dgram: 'empty',

@@ -6,12 +6,24 @@
       {% for name, path in theme.menu %}
         {% set itemName = name.toLowerCase() %}
         <li class="menu-item menu-item-{{ itemName | replace(' ', '-') }}">
-          <a href="{{ url_for(path.split('||')[0]) | trim }}" rel="section">
+          <a href="{{ url_for(path.split('||')[0]) | trim }}" rel="section"{% if path.split('||')[2] %} target="_blank"{% endif %}>
             {% if theme.menu_icons.enable %}
               <i class="menu-item-icon fa fa-fw fa-{{ path.split('||')[1] | trim | default('question-circle') }}"></i> <br />
             {% endif %}
             {{ __('menu.' + name) | replace('menu.', '') }}
           </a>
+          {% if theme.submenu[itemName] %}
+            <ul class="submenu submenu-{{ itemName | replace(' ', '-') }}">
+              {% for name, path in theme.submenu[itemName] %}
+                {% set itemName = name.toLowerCase() %}
+                <li class="submenu-item submenu-item-{{ itemName | replace(' ', '-') }}">
+                  <a href="{{ url_for(path) | trim }}" rel="section" target="_blank">
+                    {{ __('menu.' + name) | replace('menu.', '') }}
+                  </a>
+                </li>
+              {% endfor %}
+            </ul>
+          {% endif %}
         </li>
       {% endfor %}
 

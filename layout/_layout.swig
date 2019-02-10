@@ -12,7 +12,7 @@
   {% include '_third-party/analytics/index.swig' %}
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="{{ page.lang || page.language || config.language }}">
+<body itemscope itemtype="http://schema.org/WebPage" lang="{{ page.lang || page.language || config.language }}" class="theme-mai">
 
   {% set container_class = "container " %}
   {% if theme.sidebar.position %}
@@ -58,7 +58,7 @@
     {% endif %}
 
     <canvas id="evanyou"></canvas>
-    <canvas id="live2d" width="150" height="400" class="live2d"></canvas>
+    <div id="aplayer-fixed"></div>
 
     {% if theme.needmoreshare2.enable and theme.needmoreshare2.float.enable %}
       <div id="needsharebutton-float">
@@ -79,5 +79,36 @@
   {% include '_third-party/mathjax.swig' %}
   {% include '_third-party/scroll-cookie.swig' %}
   {% include '_third-party/exturl.swig' %}
+
+  <!--<script>
+    // remove service worker cache
+    // from https://stackoverflow.com/questions/33704791/how-do-i-uninstall-a-service-worker
+    "use strict";
+    if(navigator.serviceWorker)
+    {
+        navigator.serviceWorker.getRegistrations().then(function(registrations) {
+            for(let registration of registrations) {
+                registration.unregister()
+            }
+        })
+    }
+  </script>-->
+
+  <script>
+    var serviceWorkerUri = '/sw.js';
+    if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register(serviceWorkerUri).then(function() {
+          if (navigator.serviceWorker.controller) {
+            console.log('Assets cached by the controlling service worker.');
+          } else {
+            console.log('Please reload this page to allow the service worker to handle network operations.');
+          }
+        }).catch(function(error) {
+          console.log('ERROR: ' + error);
+        });
+    } else {
+        console.log('Service workers are not supported in the current browser.');
+    }
+  </script>
 </body>
 </html>

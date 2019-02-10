@@ -24,18 +24,20 @@ favicon:
   hidden: /images/failure.ico
   show_text: (/≧▽≦/)咦！又好了！
   hide_text: (●—●)喔哟，崩溃啦！
-  apple_touch_icon: /images/apple-touch-icon-next.png
-  safari_pinned_tab: /images/logo.svg
+  apple_touch_icon: /images/logo_square.png
+  safari_pinned_tab: /images/logo_square.png
   #android_manifest: /images/manifest.json
   #ms_browserconfig: /images/browserconfig.xml
 
 # Set default keywords (Use a comma to separate)
-keywords: "ghostsf,blog,life,code"
+keywords: "ghostsf,code,life,blog"
 
 # Set rss to false to disable feed link.
 # Leave rss as empty to use site's feed link.
 # Set rss to specific value if you have burned your feed already.
 rss:
+
+# emailfeed: http://eepurl.com/dEnzz1
 
 # ---------------------------------------------------------------
 # SEO Settings
@@ -64,12 +66,27 @@ index_with_subtitle: false
 # Value before `||` delimeter is the target link.
 # Value after `||` delimeter is the name of FontAwesome icon. If icon (with or without delimeter) is not specified, question icon will be loaded.
 menu:
-  home: / || home
-  archives: /archives/ || archive
+  首页: / || home
+  抓到我: javascript:; || sign-language
+  实验室: javascript:; || flask
+  归档: /archives/ || archive
   投喂: /donate/ || cutlery
   友链: /friends/ || mars
   留言板: /message/ || pencil
-  about: /about/ || rocket
+  # 关于: /about/ || rocket
+
+submenu:
+  抓到我:
+    GitHub: https://github.com/ghostsf
+    Twitter: https://twitter.com/ghostsf
+#    QQ 群: /images/qq-g.jpg
+#    Telegram 频道: https://t.me/lemonsaas
+    Telegram 群: https://t.me/lemonsaas
+  实验室:
+    LemonSaaS-A: http://a.lemonsaas.com/
+#    TT RSS:
+    监控: https://status.ghostsf.com/
+#    NAS:
 
 # Enable/Disable menu icons.
 menu_icons:
@@ -97,11 +114,11 @@ scheme: Pisces
 # Value before `||` delimeter is the target permalink.
 # Value after `||` delimeter is the name of FontAwesome icon. If icon (with or without delimeter) is not specified, globe icon will be loaded.
 social:
-  GitHub: https://github.com/ghostsf || github
-  Twitter: https://twitter.com/ghostsf || twitter
-  QQ 群: /images/qq-g.jpg || qq || qq
-  Telegram Channel: https://t.me/ghostsf || telegram
-  更多: http://ghostsf.com/about || more
+  GitHub: https://github.com/ghostsf || <i class="fa fa-fw fa-github"></i>
+  Twitter: https://twitter.com/ghostsf || <i class="fa fa-fw fa-twitter"></i>
+  QQ 群: /images/qq-g.jpg || <i class="fa fa-fw fa-qq"></i>
+  Telegram 频道: https://t.me/awesomeDIYgod || <i class="fa fa-fw fa-telegram"></i>
+  Telegram 群: https://t.me/prpr233 || <i class="fa fa-fw fa-telegram"></i>
 
 social_icons:
   enable: true
@@ -114,12 +131,12 @@ links_title: Links
 links_layout: block
 #links_layout: inline
 links:
-  DIYgos: https://ghostsf.com || https://ghostsf.com/images/avatar_square.png || Hi, ghostsf
+  佳佳: http://luojia.me/ || /images/link/%E4%BD%B3%E4%BD%B3.jpg || 跨次元日常卖萌
 
 # Sidebar Avatar
 # in theme directory(source/images): /images/avatar.gif
 # in site  directory(source/uploads): /uploads/avatar.gif
-avatar: /images/avatar_square.png
+avatar: /images/logo_square.png
 
 # Table Of Contents in the Sidebar
 toc:
@@ -195,13 +212,13 @@ post_meta:
 # Dependencies: https://github.com/willin/hexo-wordcount
 post_wordcount:
   item_text: true
-  wordcount: false
+  wordcount: true
   min2read: false
   totalcount: false
-  separated_meta: true
+  separated_meta: false
 
-# Wechat Subscriber
-#wechat_subscriber:
+  # Wechat Subscriber
+  #wechat_subscriber:
   #enabled: true
   #qcode: /path/to/your/wechatqcode ex. /uploads/wechat-qcode.jpg
   #description: ex. subscribe to my blog by scanning my public wechat account
@@ -261,7 +278,7 @@ font:
   enable: true
 
   # Uri of fonts host. E.g. //fonts.googleapis.com (Default).
-  host: //fonts.cat.net
+  host: //fonts.loli.net
 
   # Font options:
   # `external: true` will load this font family from `host` above.
@@ -304,6 +321,7 @@ font:
     external: true
     family: Sigmar One
 
+
 # ---------------------------------------------------------------
 # Third Party Services Settings
 # ---------------------------------------------------------------
@@ -328,9 +346,13 @@ han: false
 
 # Disqus
 disqus:
-  enable: true
-  shortname: ghostsf
+  enable: false
+  shortname: diygod-me
   count: false
+  api: https://disqus.diygod.me/api/
+  apikey: h403RnxQYBk2VylgLZwxodAtYOEL9bzgfhpcc8AZEU0EXn9cEWUoTwrgL3VB5tvj
+  admin: DIYgod
+  adminLabel: 服务生
 
 # Hypercomments
 #hypercomments_id:
@@ -377,18 +399,18 @@ gitment:
   proxy_gateway: # Address of api proxy, See: https://github.com/aimingoo/intersect
   redirect_protocol: # Protocol of redirect_uri with force_redirect_protocol when mint enabled
 
-# Baidu Share
-# Available value:
-#    button | slide
-# Warning: Baidu Share does not support https.
-#baidushare:
-##  type: button
+  # Baidu Share
+  # Available value:
+  #    button | slide
+  # Warning: Baidu Share does not support https.
+  #baidushare:
+  ##  type: button
 
-# Share
-# This plugin is more useful in China, make sure you known how to use it.
-# And you can find the use guide at official webiste: http://www.jiathis.com/.
-# Warning: JiaThis does not support https.
-#jiathis:
+  # Share
+  # This plugin is more useful in China, make sure you known how to use it.
+  # And you can find the use guide at official webiste: http://www.jiathis.com/.
+  # Warning: JiaThis does not support https.
+  #jiathis:
   ##uid: Get this uid from http://www.jiathis.com/
 #add_this_id:
 
@@ -428,7 +450,7 @@ needmoreshare2:
 #google_site_verification:
 
 # Google Analytics
-google_analytics:
+#google_analytics: UA-48084758-7
 
 # Bing Webmaster tools verification setting
 # See: https://www.bing.com/webmaster/
@@ -494,9 +516,9 @@ rating:
 # Show number of visitors to each article.
 # You can visit https://leancloud.cn get AppID and AppKey.
 leancloud_visitors:
-  enable: false
-  app_id:
-  app_key:
+  enable: true
+  app_id: Ti5mwFDXXbpWqeWdaydLNfOS-gzGzoHsz
+  app_key: rXpryRyVs5jlk2LAGGI1bfEd
 
 # Show PV/UV of the website/page with busuanzi.
 # Get more information on http://ibruce.info/2015/04/04/busuanzi/
@@ -625,7 +647,7 @@ motion:
     sidebar: slideUpIn
 
 # Fancybox
-fancybox: true
+fancybox: false
 
 # Progress bar in the top during page loading.
 pace: false
@@ -680,8 +702,10 @@ vendors:
   # Internal path prefix. Please do not edit it.
   _internal: lib
 
+  disqusjs: https://cdn.jsdelivr.net/npm/disqusjs@1.0.8/dist/disqus.js
+
   # Internal version: 2.1.3
-  jquery: https://cdn.bootcss.com/jquery/2.1.3/jquery.min.js
+  jquery: https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js
 
   # Internal version: 2.1.5
   # See: http://fancyapps.com/fancybox/
@@ -710,9 +734,9 @@ vendors:
 
   # Internal version: 4.7.0
   # See: http://fontawesome.io/
-  fontawesome: https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.css
+  fontawesome: https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css
 
-  social_share_css: https://cdn.bootcss.com/social-share.js/1.0.9/css/share.min.css
+  social_share_css: https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/css/share.min.css
 
   # Internal version: 1
   # https://www.algolia.com
@@ -768,13 +792,13 @@ header_bg: /images/header-sagiri.jpg
 
 card:
   avatar: /images/card.jpg
-  name: <span style="opacity:.2;">文艺IT男</span>ghostsf
+  name: <span style="opacity:.2;">全栈菜鸟</span>ghostsf
   description: 你能抓到我么？
 
 footer:
   # Specify the date when the site was setup.
   # If not defined, current year will be used.
-  since: 2/9/2014 11:30:00
+  since: 1/6/2015 00:00:00
 
   # Icon between year and copyright info.
   icon: user
@@ -792,11 +816,13 @@ footer:
     version: true
   # -------------------------------------------------------------
   # Any custom text can be defined here.
-  custom_text: custom text
+  custom_text: 托管于<a href="https://github.com/" target="_blank" rel="nofollow"> GitHub</a>. <a href="https://www.upyun.com/" target="_blank" rel="nofollow">又拍云</a> 提供 CDN 服务. <a href="http://www.google.com/analytics/" target="_blank" rel="nofollow">Google Analytics </a>提供网站统计服务. <a href="https://www.cloudxns.net/" target="_blank" rel="nofollow">CloudXNS </a>提供 DNS 解析服务.
   sitemap: /sitemap.xml
-  beian: xxxx
+  beian: 苏ICP备15036367号
 
 online_api:
 
+description: <span>Do what i love ，</span><span>and just do it！</span>
+
 # Theme version
-version: 0.0.4
+version: 0.0.1
