@@ -7,7 +7,8 @@ const apFixed = new APlayer({
   fixed: true,
 });
 $.ajax({
-  url: 'https://api.i-meto.com/meting/api?server=netease&type=playlist&id=35798529',
+  // TODO 网易云音乐列表ID
+  url: 'https://api.i-meto.com/meting/api?server=netease&type=playlist&id=40419567',
   success: function (list) {
     apFixed.list.add(JSON.parse(list));
   }
