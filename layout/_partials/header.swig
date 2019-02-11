@@ -43,7 +43,7 @@
       {% endif %}
       <li class="menu-item search">
           <form class="search-form">
-            <input name="keyword" type="text" class="search-input" placeholder="站内搜索">
+            <input name="keyword" type="text" class="search-input" placeholder="搜索">
             <button type="submit" class="search-submit"><i class="fa fa-search"></i></button>
           </form>
       </li>

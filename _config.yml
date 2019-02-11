@@ -70,7 +70,7 @@ menu:
   抓到我: javascript:; || sign-language
   实验室: javascript:; || flask
   归档: /archives/ || archive
-  投喂: /donate/ || cutlery
+#  投喂: /donate/ || cutlery
   友链: /friends/ || mars
   留言板: /message/ || pencil
   # 关于: /about/ || rocket
