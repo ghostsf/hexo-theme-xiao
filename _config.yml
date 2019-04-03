@@ -791,9 +791,9 @@ images: images
 header_bg: /images/header-sagiri.jpg
 
 card:
-  avatar: /images/card.jpg
+  avatar: /images/dsl-avatar.jpeg
   name: <span style="opacity:.2;">全栈菜鸟</span>ghostsf
-  description: 你能抓到我么？
+  description: Do what i love !
 
 footer:
   # Specify the date when the site was setup.
