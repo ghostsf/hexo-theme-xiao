@@ -69,24 +69,6 @@
       </div>
     {% endif %}
 
-    <div class="custom-logo-site-title">
-      <div class="brand">
-        <span class="logo-line-before"><i></i></span>
-        <div class="site-title">
-          <div id="animate" class="animate">
-            {% for letter in config.title %}{#
-              #}<span>{{ letter }}</span>{#
-            #}{% endfor %}
-          </div>
-          <div id="guide" class="guide">
-            {% for letter in config.title %}{#
-              #}<span>{{ letter }}</span>{#
-            #}{% endfor %}
-          </div>
-        </div>
-        <span class="logo-line-after"><i></i></span>
-      </div>
-    </div>
       {% if theme.seo %}
         <h1 class="site-subtitle" itemprop="description">{{ config.subtitle }}</h1>
       {% else %}
