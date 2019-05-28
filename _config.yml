@@ -86,7 +86,8 @@ submenu:
     LemonSaaS-A: http://a.lemonsaas.com/
 #    TT RSS:
     监控: https://status.ghostsf.com/
-#    NAS:
+    NAS: https://nas.ghostsf.com:2222
+    下载机: http://nas.ghostsf.com:3333
 
 # Enable/Disable menu icons.
 menu_icons:
@@ -203,19 +204,20 @@ auto_excerpt:
 
 # Post meta display settings
 post_meta:
-  item_text: true
+  item_text: false
   created_at: true
   updated_at: false
   categories: true
 
 # Post wordcount display settings
-# Dependencies: https://github.com/willin/hexo-wordcount
-post_wordcount:
-  item_text: true
-  wordcount: true # 单篇 字数统计
-  min2read: true # 单篇 阅读时长
-  totalcount: false # 网站 字数统计
-  separated_meta: false
+# Dependencies: https://github.com/theme-next/hexo-symbols-count-time
+symbols_count_time:
+  separated_meta: true
+  item_text_post: false
+  item_text_total: false
+  awl: 4
+  wpm: 275
+  suffix: mins.
 
   # Wechat Subscriber
   #wechat_subscriber:
@@ -346,11 +348,11 @@ baidu_analytics: d34c1ea90fbad8193b675c4c0767b8e2
 
 # Disqus
 disqus:
-  enable: false
+  enable: true
   shortname: ghostsf
   count: false
-  api: https://disqus.diygod.me/api/
-  apikey: h403RnxQYBk2VylgLZwxodAtYOEL9bzgfhpcc8AZEU0EXn9cEWUoTwrgL3VB5tvj
+  api: https://disqus.skk.moe/disqus/
+  apikey: 9WSWCTw86Za2KgcBLJG6RFulyrqgBhHlDKysX34fdT0xxbVM5Rsbg8j5loQRY30m
   admin: ghostsf
   adminLabel: ghostsf
 
@@ -368,7 +370,7 @@ changyan:
 # You can get your appid and appkey from https://leancloud.cn
 # more info please open https://github.com/xCss/Valine
 valine:
-  enable: true
+  enable: false
   appid:  vBYFni3xYrGg1PUv2PQORyev-gzGzoHsz
   appkey:  jfv0kKqHnkoGG0d3JBMwC4pJ
   notify: false # mail notifier , https://github.com/xCss/Valine/wiki

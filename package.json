@@ -7,7 +7,7 @@
     "test": "test"
   },
   "scripts": {
-    "test": "gulp"
+    "start": "node_modules/.bin/webpack"
   },
   "repository": {
     "type": "git",
@@ -45,7 +45,6 @@
     "fastclick": "1.0.6",
     "gsap": "2.0.2",
     "headroom.js": "0.9.4",
-    "hexo-wordcount": "^6.0.1",
     "jquery-pjax": "2.0.1",
     "lazyload": "2.0.0-beta.2",
     "leancloud-storage": "3.11.1",

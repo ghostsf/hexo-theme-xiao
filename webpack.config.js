@@ -13,7 +13,7 @@ module.exports = {
     devtool: 'source-map',
 
     entry: {
-        'sagiri': './src/index.js'
+        'xiao': './src/index.js'
     },
 
     output: {
