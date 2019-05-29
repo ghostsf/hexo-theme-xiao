@@ -73,7 +73,8 @@ menu:
 #  投喂: /donate/ || cutlery
   友链: /friends/ || mars
   留言板: /message/ || pencil
-  关于: /about/ || rocket
+  简历: /resume/ || address-card-o
+  关于: /i/ || rocket
 
 submenu:
   抓到我:
