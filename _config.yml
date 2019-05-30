@@ -79,12 +79,12 @@ menu:
 submenu:
   抓到我:
     GitHub: https://github.com/ghostsf
-    Twitter: https://twitter.com/ghostsf
+    Twitter: https://twitter.com/ghostsf0501
 #    QQ 群: /images/qq-g.jpg
 #    Telegram 频道: https://t.me/lemonsaas
     Telegram 群: https://t.me/lemonsaas
   实验室:
-    LemonSaaS-A: http://a.lemonsaas.com/
+    LemonSaaS-A: https://a.lemonsaas.com/
 #    TT RSS:
     监控: https://status.ghostsf.com/
     NAS: https://nas.ghostsf.com:2222
@@ -117,7 +117,7 @@ scheme: Pisces
 # Value after `||` delimeter is the name of FontAwesome icon. If icon (with or without delimeter) is not specified, globe icon will be loaded.
 social:
   GitHub: https://github.com/ghostsf || <i class="fa fa-fw fa-github"></i>
-  Twitter: https://twitter.com/ghostsf || <i class="fa fa-fw fa-twitter"></i>
+  Twitter: https://twitter.com/ghostsf0501 || <i class="fa fa-fw fa-twitter"></i>
 #  QQ 群: /images/qq-g.jpg || <i class="fa fa-fw fa-qq"></i>
   Telegram: https://t.me/ghostsf || <i class="fa fa-fw fa-telegram"></i>
 #  Telegram 群: https://t.me/prpr233 || <i class="fa fa-fw fa-telegram"></i>
