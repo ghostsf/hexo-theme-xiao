@@ -133,9 +133,13 @@ links_title: Links
 links_layout: block
 #links_layout: inline
 links:
-  佳佳: http://luojia.me/ || /images/link/%E4%BD%B3%E4%BD%B3.jpg || 跨次元日常卖萌
-  Touko: https://touko.moe/ || /images/link/Touko.png || 對網絡安全、數據加密有極大的興趣
+  佳佳: http://luojia.me || /images/link/%E4%BD%B3%E4%BD%B3.jpg || 跨次元日常卖萌
+  九尾狐: http://www.jiufox.com || /images/link/fox.gif || 爱游戏、爱科技、懂生活的小萝莉
+  DiyGod: https://diygod.me || /images/link/diygod.png || Write the Code, Change the World
+  hujiaweibujidao: https://hujiaweibujidao.github.io || /images/link/hujiaweibujidao.jpeg || Javay , 宅男潇涧
+  Touko: https://touko.moe || /images/link/Touko.png || 對網絡安全、數據加密有極大的興趣
   Ephen: https://ephen.me || /images/link/ephen.jpg || 奇葩一朵，IT 废材
+
 
 # Sidebar Avatar
 # in theme directory(source/images): /images/avatar.gif
