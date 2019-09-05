@@ -3,6 +3,7 @@ let AV;
 if (window.CONFIG.leancloud.enable) {
   AV = require('leancloud-storage');
   AV.initialize(window.CONFIG.leancloud.appID, window.CONFIG.leancloud.appKey);
+  AV.setServerURLs("https://blogbaas.ghostsf.com");
 }
 
 function leancloud () {
