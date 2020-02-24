@@ -31,7 +31,7 @@
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             {% if theme.avatar %}
               <img class="site-author-image" itemprop="image"
-                src="{{ url_for( theme.card.avatar | default(theme.images + '/card.jpg') ) }}"
+                src="{{ url_for( theme.card.avatar | default(theme.images + '/dsl-avatar.jpeg') ) }}"
                 alt="{{ theme.author }}" />
             {% endif %}
               <p class="site-author-name" itemprop="name">{{ theme.card.name }}</p>
@@ -61,6 +61,7 @@
             {% endif %}
           </div>
 
+          {% if theme.card.items %}
           <div class="des-of-author">
               <div class="des-of-author-nav">
                 {% for title, des in theme.card.items %}
@@ -81,6 +82,7 @@
                 {% endfor %}
               </div>
           </div>
+          {% endif %}
 
           <details class="views-top-wrap">
             <summary class="views-top-name scaleup">看爆 Top5</summary>

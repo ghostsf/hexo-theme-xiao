@@ -31,6 +31,8 @@ post:
   untitled: 未命名
   toc_empty: 此文章未包含目录
   visitors: 阅读次数
+  wordcount: 字数统计
+  min2read: 阅读时长
   copyright:
     author: 本文作者
     link: 本文链接
@@ -98,10 +100,3 @@ accessibility:
   nav_toggle: 切换导航栏
   prev_page: 上一页
   next_page: 下一页
-
-symbols_count_time:
-  count: 本文字数
-  count_total: 站点总字数
-  time: 阅读时长
-  time_total: 站点阅读时长
-  time_minutes: 分钟

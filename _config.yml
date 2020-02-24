@@ -216,10 +216,10 @@ post_meta:
 # Dependencies: https://github.com/willin/hexo-wordcount
 post_wordcount:
   item_text: true
-  wordcount: false
+  wordcount: true
   min2read: false
   totalcount: false
-  separated_meta: true
+  separated_meta: false
 
 # Wechat Subscriber
 #wechat_subscriber:
@@ -798,9 +798,9 @@ card:
   avatar: /images/dsl-avatar.jpeg
   name: <span style="opacity:.2;">全栈菜鸟</span>ghostsf
   description: Do what i love !
-  items:
-    装备: MacBook Pro (15-inch, 2017)、iPhone xs max、Mi 6、小米手环3、Nintendo Switch、Beats Studio 3、自制软路由
-    理想: 独立开发者、财富自由
+#  items:
+#    装备: MacBook Pro (15-inch, 2017)、iPhone xs max、Mi 6、小米手环3、Nintendo Switch、Beats Studio 3、自制软路由
+#    理想: 独立开发者、财富自由
 
 footer:
   # Specify the date when the site was setup.

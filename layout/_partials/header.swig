@@ -43,7 +43,7 @@
       {% endif %}
       <li class="menu-item search">
           <form class="search-form">
-            <input name="keyword" type="text" class="search-input" placeholder="站内搜索">
+            <input name="keyword" type="text" class="search-input" placeholder="搜索">
             <button type="submit" class="search-submit"><i class="fas fa-search"></i></button>
           </form>
       </li>
@@ -58,7 +58,7 @@
   {% endif %}
 </nav>
 
-<div class="site-brand-wrapper" style="background-image: url({{ url_for( theme.header_bg | default(theme.images + '/header.jpg') ) }})">
+<div class="site-brand-wrapper" style="background-image: url({{ url_for( theme.header_bg | default(theme.images + '/header-dsl.jpg') ) }})">
   <div class="site-meta {% if theme.custom_logo.enabled %}custom-logo{% endif %}">
     {% if theme.custom_logo.image and theme.scheme === 'Muse' %}
       <div class="site-meta-headline">
@@ -73,22 +73,9 @@
       <div class="brand">
         <span class="logo-line-before"><i></i></span>
         <div class="site-title">
-          <div id="animate-stroke" class="animate">
-            {% for letter in config.title %}{#
-              #}<span>
-                  <svg>
-                    <use xlink:href="#stroke{{ letter }}"></use>
-                  </svg>
-                </span>{#
-            #}{% endfor %}
-          </div>
           <div id="animate" class="animate">
             {% for letter in config.title %}{#
-              #}<span>
-                  <svg>
-                    <text id="stroke{{ letter }}">{{ letter }}</text>
-                  </svg>
-                </span>{#
+              #}<span>{{ letter }}</span>{#
             #}{% endfor %}
           </div>
           <div id="guide" class="guide">
