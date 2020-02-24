@@ -1,26 +1,26 @@
 {
-  "name": "hexo-theme-sagiri",
+  "name": "hexo-theme-xiao",
   "version": "0.0.1",
-  "description": "As lovely as sagiri",
+  "description": "My lovely hexo theme xiao",
   "main": "index.js",
   "directories": {
     "test": "test"
   },
   "scripts": {
-    "build": "cross-env NODE_ENV=production webpack --config webpack.config.js --progress --display-error-details --colors"
+    "test": "gulp"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/DIYgod/hexo-theme-sagiri.git"
+    "url": "git+https://github.com/ghostsf/hexo-theme-xiao.git"
   },
   "keywords": [
-    "sagiri",
+    "xiao",
     "Hexo"
   ],
-  "author": "DIYgod",
+  "author": "ghostsf",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/DIYgod/hexo-theme-sagiri/issues"
+    "url": "https://github.com/ghostsf/hexo-theme-xiao/issues"
   },
   "homepage": "https://diygod.me",
   "devDependencies": {

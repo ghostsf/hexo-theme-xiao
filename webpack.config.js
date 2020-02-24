@@ -13,9 +13,9 @@ module.exports = {
 
   devtool: 'source-map',
 
-  entry: {
-    'sagiri': './src/index.js'
-  },
+    entry: {
+        'xiao': './src/index.js'
+    },
 
   output: {
     path: path.resolve(__dirname, 'source', 'js'),
@@ -55,11 +55,11 @@ module.exports = {
     }),
   ],
 
-  node: {
-    dgram: 'empty',
-    fs: 'empty',
-    net: 'empty',
-    tls: 'empty',
-  }
+    node: {
+        dgram: 'empty',
+        fs: 'empty',
+        net: 'empty',
+        tls: 'empty',
+    }
 
 };

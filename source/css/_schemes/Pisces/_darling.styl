@@ -7,14 +7,24 @@ $darling-red    = #ff3f1a
     text-shadow: 1px 1px 0 $darling-red, -1px -1px 0 $darling-blue;
   }
 
+  .site-brand-wrapper {
+    background-image: url(/images/header-darling3.jpg) !important;
+  }
+
   .site-master-description {
+    span:nth-child(1) {
+      color: $darling-blue !important;
+    }
+    span:nth-child(2) {
+      color: $darling-red !important;
+    }
   }
 
   .post-meta {
     .post-time {
-      color: $darling-blue;
+      color: $darling-black;
     }
-    .post-wordcount {
+    .post-symbolscount {
       color: $darling-black;
 
       a {
@@ -22,8 +32,12 @@ $darling-red    = #ff3f1a
       }
     }
     .leancloud_visitors {
-      color: $darling-red;
+      color: $darling-black;
     }
+  }
+
+  .site-author-name {
+    text-shadow: 1px 1px 0 $darling-red, -1px -1px 0 $darling-blue;
   }
 
   .site-state-posts .site-state-item-name {
@@ -34,9 +48,30 @@ $darling-red    = #ff3f1a
     color: $darling-red;
   }
 
+  .post:before {
+    content: "";
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    width: 60px;
+    height: 64px;
+    background: url(/images/darling-xx.png);
+    background-size: contain;
+
+    +mobile() {
+      display: none;
+    }
+  }
+
   .posts-collapse {
     .post:before {
       display: none;
+    }
+  }
+
+  .brand {
+    +mobile() {
+      top: 60px;
     }
   }
 }
