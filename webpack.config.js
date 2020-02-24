@@ -1,71 +1,65 @@
 /* eslint-disable no-undef */
 const path = require('path');
 const webpack = require('webpack');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const GitRevisionPlugin = require('git-revision-webpack-plugin');
 const gitRevisionPlugin = new GitRevisionPlugin();
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 module.exports = {
 
-    bail: true,
+  mode: 'production',
 
-    devtool: 'source-map',
+  bail: true,
 
-    entry: {
-        'sagiri': './src/index.js'
-    },
+  devtool: 'source-map',
 
-    output: {
-        path: path.resolve(__dirname, 'source', 'js'),
-        filename: '[name].min.js',
-        publicPath: '/'
-    },
+  entry: {
+    'sagiri': './src/index.js'
+  },
 
-    resolve: {
-        modules: ['node_modules'],
-        extensions: ['.js']
-    },
+  output: {
+    path: path.resolve(__dirname, 'source', 'js'),
+    filename: '[name].min.js',
+    publicPath: '/'
+  },
 
-    module: {
-        strictExportPresence: true,
-        rules: [
-            {
-                test: /\.js$/,
-                use: [
-                    {
-                        loader: require.resolve('babel-loader'),
-                        options: {
-                            compact: true,
-                            presets: ['env']
-                        }
-                    }
-                ]
+  resolve: {
+    modules: ['node_modules'],
+    extensions: ['.js']
+  },
+
+  module: {
+    strictExportPresence: true,
+    rules: [
+      {
+        test: /\.js$/,
+        use: [
+          {
+            loader: require.resolve('babel-loader'),
+            options: {
+              compact: true,
+              presets: ['@babel/preset-env']
             }
+          }
         ]
-    },
+      }
+    ]
+  },
 
-    plugins: [
-        new webpack.DefinePlugin({
-            DPLAYER_VERSION: `"${require('./package.json').version}"`,
-            GIT_HASH: JSON.stringify(gitRevisionPlugin.version())
-        }),
-        new webpack.optimize.UglifyJsPlugin({
-            compress: {
-                warnings: false
-            },
-            output: {
-                comments: false,
-                ascii_only: true
-            },
-            sourceMap: true
-        })
-    ],
+  plugins: [
+    new BundleAnalyzerPlugin({
+      logLevel: 'warn',
+      reportFilename: 'video-report.html',
+      analyzerMode: 'static',
+      openAnalyzer: false,
+    }),
+  ],
 
-    node: {
-        dgram: 'empty',
-        fs: 'empty',
-        net: 'empty',
-        tls: 'empty',
-    }
+  node: {
+    dgram: 'empty',
+    fs: 'empty',
+    net: 'empty',
+    tls: 'empty',
+  }
 
 };

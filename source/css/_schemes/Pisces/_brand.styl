@@ -3,7 +3,7 @@
   height: 650px;
   width: 100%;
   background-size: cover;
-  background-position: center 50%;
+  background-position: center;
   background-repeat: no-repeat;
 
   +mobile() {
@@ -31,7 +31,7 @@
 
   +mobile() {
     font-size: 7.8vw;
-    top: 40px;
+    top: 100px;
     margin-bottom: 0;
   }
 
@@ -54,5 +54,24 @@
   .animate span {
     position: absolute;
     opacity: 0;
+  }
+
+  .animate svg {
+    fill: #ff8a25;
+    overflow: visible;
+    text-shadow: none;
+    height: 1px;
+  }
+
+  .animate use {
+    stroke: #fff;
+    stroke-width: 13px;
+    stroke-linejoin: round;
+  }
+
+  .animate {
+    transition: 0.3s;
+    position: absolute;
+    top: 0;
   }
 }

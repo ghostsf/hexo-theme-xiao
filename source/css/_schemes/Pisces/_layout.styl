@@ -137,11 +137,12 @@ body {
   top: 0;
   left: 0;
   z-index: -1;
+  background: #efefef;
 }
 
 a {
   border-bottom: 0;
-  color: #795548;
+  color: #ab3300;
 }
 
 .btn {
@@ -153,22 +154,12 @@ a {
   border: none;
 
   &:hover {
-    background: $second-color;
+    background: $main-color;
   }
 }
 
 .posts-expand .post-body .fancybox img {
   border: none;
-}
-
-#live2d {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-
-  +mobile() {
-    display: none;
-  }
 }
 
 
@@ -236,4 +227,12 @@ a {
 .tada {
     -webkit-animation-name: tada;
     animation-name: tada;
+}
+
+.scaleup {
+    transition: 0.3s ease;
+
+    &:hover {
+      transform: scale(1.1);
+    }
 }

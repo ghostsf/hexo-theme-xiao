@@ -1,8 +1,19 @@
 let AV;
+<<<<<<< HEAD
 
 if (window.CONFIG.leancloud.enable) {
   AV = require('leancloud-storage');
   AV.initialize(window.CONFIG.leancloud.appID, window.CONFIG.leancloud.appKey);
+=======
+if (window.CONFIG.leancloud.enable) {
+  AV = require('leancloud-storage');
+  AV.init({
+    appId: window.CONFIG.leancloud.appID,
+    appKey: window.CONFIG.leancloud.appKey,
+    serverURLs: 'https://leancloud.diygod.me',
+  });
+  window.AV = AV;
+>>>>>>> sagiri
 }
 
 function leancloud () {
@@ -34,7 +45,13 @@ function leancloud () {
             var time = item.get('time');
             var element = document.getElementById(url);
 
+<<<<<<< HEAD
             $(element).find(COUNT_CONTAINER_REF).text(time);
+=======
+            if (!$(element).find(COUNT_CONTAINER_REF).text()) {
+              $(element).find(COUNT_CONTAINER_REF).text(time);
+            }
+>>>>>>> sagiri
           }
           for (var i = 0; i < entries.length; i++) {
             var url = entries[i];
@@ -99,6 +116,23 @@ function leancloud () {
         })
     }
 
+<<<<<<< HEAD
+=======
+    function showTop (Counter) {
+      var query = new AV.Query(Counter);
+      query.descending("time");
+      query.limit(5);
+      query.find().then((results) => {
+        let tpl = '';
+        results.forEach((item) => {
+          tpl += `<li><a href="${item.attributes.url}"><span class="views-top-title">${item.attributes.title}</span><span class="views-top-time">${item.attributes.time}次看爆</span></a></li>`;
+        })
+        $('.views-top').html(tpl);
+      }, function (error) { }
+      );
+    }
+
+>>>>>>> sagiri
     $(function () {
       var Counter = AV.Object.extend("Counter");
       if ($('.leancloud_visitors').length == 1) {
@@ -106,6 +140,18 @@ function leancloud () {
       } else if ($('.post-title-link').length > 1) {
         showTime(Counter);
       }
+<<<<<<< HEAD
+=======
+      if ($('.views-top-wrap').length) {
+        let viewsInited = false;
+        $('.views-top-wrap').on('toggle', (event) => {
+          if (!viewsInited && $('.views-top-wrap')[0].open) {
+            showTop(Counter);
+            viewsInited = true;
+          }
+        });
+      }
+>>>>>>> sagiri
     });
   }
 
