@@ -33,7 +33,7 @@
             <a href="javascript:;" class="st-search-show-outputs">
           {% elseif theme.local_search.enable || theme.algolia_search.enable %}
             <a href="javascript:;" class="popup-trigger">
-          {% endif %}
+          {% endif %}x
             {% if theme.menu_icons.enable %}
               <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
             {% endif %}
