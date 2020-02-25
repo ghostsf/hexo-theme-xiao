@@ -23,7 +23,7 @@ require('./title');
 require('./mix');
 require('./clipboard');
 require('./pjax');
-require('./online');
+// require('./online');
 require('./search');
 require('./zoom')();
 require('./aplayer');
