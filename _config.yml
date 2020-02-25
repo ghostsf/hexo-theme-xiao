@@ -805,7 +805,7 @@ card:
 footer:
   # Specify the date when the site was setup.
   # If not defined, current year will be used.
-  since: 2/9/2014 11:30:00
+  since: 1/6/2015 00:00:00
 
   # Icon between year and copyright info.
   icon: user
