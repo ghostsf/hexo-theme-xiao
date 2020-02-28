@@ -25,7 +25,7 @@
   "homepage": "https://diygod.me",
   "devDependencies": {
     "@babel/core": "^7.5.5",
-    "@babel/preset-env": "^7.5.5",
+    "@babel/preset-env": "^7.8.6",
     "babel-loader": "^8.0.6",
     "coffee-script": "^1.10.0",
     "cross-env": "7.0.0",
