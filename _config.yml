@@ -226,7 +226,7 @@ post_wordcount:
 wechat_subscriber:
   enabled: true
   qcode: /images/wechat-qcode.jpg
-  description: 一个文艺IT男
+  description: 一个有点意思的公号
 
 # Reward
 reward_comment:
