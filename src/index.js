@@ -19,7 +19,6 @@ require('./scroll');
 require('./since');
 require('./title');
 // require('./type');
-// require('./kanban');
 require('./mix');
 require('./clipboard');
 require('./pjax');

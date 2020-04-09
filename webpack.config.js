@@ -49,7 +49,7 @@ module.exports = {
   plugins: [
     new BundleAnalyzerPlugin({
       logLevel: 'warn',
-      reportFilename: 'video-report.html',
+      reportFilename: '../../bundleAnalyzer.html',
       analyzerMode: 'static',
       openAnalyzer: false,
     }),
